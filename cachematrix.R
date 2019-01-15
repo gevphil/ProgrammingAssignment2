@@ -1,7 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
 
-## This function creates a cached matrix
+## This function creates a cached matrix and provides the ability
+## to set or get a matrix, previous matrix, or inverse matrix 
 
 makeCacheMatrix <- function(x = matrix()) {
     matrix <- x
@@ -24,7 +23,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Returns a matrix that is the inverse of x
+## Returns a matrix that is the inverse of x but checks to see if
+## the inverse matrix is already cached. If the inverse matrix is not
+## cached the inverse matrix is calculated then stored in the cache.
 
 cacheSolve <- function(x, ...) {
     matrix <- x$get()
